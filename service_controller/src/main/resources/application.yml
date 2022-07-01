@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+eureka:
+  client:
+    register-with-eureka: false # 消费者无需像服务注册中心注册
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka
+    fetch-registry: true #服务消费者需要去检索服务，获取服务提供者列表

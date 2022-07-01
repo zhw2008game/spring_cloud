@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: cloud-service-service # 注意此处不能使用下划线_,否则feign调用时会报错,找不到服务,不支持下划线
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka
+
+  instance:
+    instance-id: springCloud-provider-service-8081
+    prefer-ip-address: true
