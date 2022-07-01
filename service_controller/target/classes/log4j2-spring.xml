@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration monitorInterval="5">
     <Properties>
-        <property name="CONSOLE_LOG_PATTERN" value="%date{yyyy-MM-dd HH:mm:ss.SSS} %highlight{%-5level}{ERROR=Bright RED, WARN=Bright Yellow, INFO=Forest Green, DEBUG=Bright Cyan, TRACE=Bright White} --- %style{[%12.12t]}{magenta} %style{%-40.40logger{10}(%4L)}{cyan}:  %msg%n"/>
+        <property name="CONSOLE_LOG_PATTERN" value="%date{yyyy-MM-dd HH:mm:ss.SSS} [%traceId] %highlight{%-5level}{ERROR=Bright RED, WARN=Bright Yellow, INFO=Forest Green, DEBUG=Bright Cyan, TRACE=Bright White} --- %style{[%12.12t]}{magenta} %style{%-40.40logger{10}(%4L)}{cyan}:  %msg%n"/>
         <property name="FILE_LOG_PATTERN" value="%date{yyyy-MM-dd HH:mm:ss.SSS} [%X{traceId}] [%thread] %-5level %logger.%M(java:%L) - %msg%n" />
         <property name="FILE_LOG_PATH" value="/opt/logs/springCloud" />
         <property name="FILE_INFO_LOG_NAME" value="service_controller_info" />
