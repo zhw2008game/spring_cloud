@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: cloud_service_dao
+    name: cloud-service-dao
 
 eureka:
   client:
