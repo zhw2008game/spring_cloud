@@ -37,6 +37,8 @@ public class SkyWalkingController {
 
 
         logger.info("执行业务--3");
+
+        skyWalkingService.logTrace();
         return "";
     }
 }
