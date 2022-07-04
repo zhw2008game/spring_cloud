@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "cloud-service-dao")
 public interface SkyWalkingServiceRPC {
 
-    @RequestMapping(value = "skyWalking/index")
+    @RequestMapping(value = "skyWalking/dao")
     String index(@RequestParam("path") String path);
 }

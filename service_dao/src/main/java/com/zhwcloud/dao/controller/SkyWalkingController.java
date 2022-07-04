@@ -14,7 +14,7 @@ public class SkyWalkingController {
     /**
      * Explain: skyWalking index接口
      */
-    @RequestMapping("index")
+    @RequestMapping("dao")
     public String skyWalkingIndex(String path){
         return skyWalkingService.index(path);
     }
