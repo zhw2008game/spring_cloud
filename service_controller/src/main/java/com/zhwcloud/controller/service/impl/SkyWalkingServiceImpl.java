@@ -18,7 +18,10 @@ public class SkyWalkingServiceImpl implements SkyWalkingService {
     @Override
     public String index() {
         String rStr = "cloud_controller";
-        return skyWalkingServiceRPC.index(rStr);
+        logger.info("调用cloud_service服务参数:{}", rStr);
+        String rpcResult = skyWalkingServiceRPC.index(rStr);
+        logger.info("rpc调用service服务结果:{}", rpcResult);
+        return rpcResult;
     }
 
     @Override
