@@ -3,3 +3,6 @@
 /.idea/
 /springCloud.iml
 /target/
+/service_controller/target/
+/service_dao/target/
+/service_servcie/target/
