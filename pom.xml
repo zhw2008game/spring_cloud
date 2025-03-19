@@ -15,7 +15,8 @@
     <version>1.0-SNAPSHOT</version>
     <!-- a -->
     <!-- b -->
-    <!-- a -->
+    <!-- a-1 -->
+    <!-- b-1 -->
     <modules>
         <module>service_eureka</module>
         <module>service_controller</module>
