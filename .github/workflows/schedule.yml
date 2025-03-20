@@ -1,12 +1,10 @@
 name: schedule work flow
-
 on:
   schedule:
     - cron: '0/1 * * * *'
   workflow_dispatch:
-
 jobs:
-  bdba:
+  task:
     runs-on: [ ubuntu-22.04 ]
     steps:
       - name: Setup 1
