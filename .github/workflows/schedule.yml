@@ -2,11 +2,11 @@ name: schedule work flow
 on:
   schedule:
     - cron: '0/5 * * * *'
+  workflow_dispatch:
   workflow_run: 
-    workflows: [feature-a]
+    workflows: [feature-a-bdba]
     types:
       - completed
-  workflow_dispatch:     
 jobs:
   task:
     runs-on: [ ubuntu-22.04 ]
