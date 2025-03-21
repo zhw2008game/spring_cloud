@@ -1,4 +1,4 @@
-name: feature-a
+name: feature-a-bdba
 on:
   workflow_dispatch:
 jobs:
@@ -7,4 +7,4 @@ jobs:
     steps:
       - name: Setup 1
         run: |
-          echo "my name is feature-a"
+          echo "my name is feature-a-bdba"
