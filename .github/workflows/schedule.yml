@@ -14,3 +14,4 @@ jobs:
       - name: Setup 1
         run: |
           echo ${{ github.ref_name }}
+          echo ${{github.repository}}
