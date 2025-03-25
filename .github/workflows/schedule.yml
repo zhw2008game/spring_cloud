@@ -13,4 +13,4 @@ jobs:
     steps:
       - name: Setup 1
         run: |
-          echo "1111"
+          echo ${{ github.ref_name }}
