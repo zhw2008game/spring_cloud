@@ -9,13 +9,13 @@ on:
       - completed
 env:
   PROJECT_NAME: 1
+  FULL_REPOSITORY: ${{github.repository}}
 jobs:
   task:
     runs-on: [ ubuntu-22.04 ]
     steps:
       - name: Get Repository Name
         run: |
-          FULL_REPOSITORY=${{github.repository}}
           echo "仓库全称:${FULL_REPOSITORY}"
           
           repository=$(echo ${FULL_REPOSITORY} | cut -d '/' -f 1)
