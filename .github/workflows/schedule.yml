@@ -16,4 +16,5 @@ jobs:
           echo ${{ github.ref_name }}
           echo ${{github.repository}}
           full_repository=${{github.repository}}
-          echo full_repository
+          repository = $(echo $str | cut -d ',' -f 2)
+          echo $(repository)
