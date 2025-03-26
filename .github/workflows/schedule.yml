@@ -18,6 +18,6 @@ jobs:
           echo ${{github.repository}}
           
           full_repository=${{github.repository}}
-          echo $(full_repository)
+          echo ${{full_repository}}
           
           echo $($(echo $(full_repository) | cut -d '/' -f 2))
