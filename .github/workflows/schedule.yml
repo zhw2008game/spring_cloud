@@ -7,6 +7,8 @@ on:
     workflows: [feature-a-bdba]
     types:
       - completed
+env:
+  PROJECT_NAME: 1
 jobs:
   task:
     runs-on: [ ubuntu-22.04 ]
@@ -24,3 +26,6 @@ jobs:
           repository=$(echo ${FULL_REPOSITORY} | cut -d '/' -f 1)
           echo 2222
           echo ${repository}
+          echo 3333
+          echo "PROJECT_NAME=$repository" >> $GITHUB_ENV
+          echo ${{PROJECT_NAME}}
