@@ -16,9 +16,9 @@ jobs:
     steps:
       - name: Get Repository Name
         run: |
-          echo "仓库全称:${env.FULL_REPOSITORY}"
+          echo "仓库全称:${{env.FULL_REPOSITORY}}"
           
-          repository=$(echo ${env.FULL_REPOSITORY} | cut -d '/' -f 1)
+          repository=$(echo ${{env.FULL_REPOSITORY}} | cut -d '/' -f 1)
           echo repository
           echo "仓库简称:${repository}"
 
