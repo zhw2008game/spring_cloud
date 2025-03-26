@@ -21,7 +21,9 @@ jobs:
           repository=$(echo ${FULL_REPOSITORY} | cut -d '/' -f 1)
           echo "仓库简称是${repository}"
 
+          echo "FRUIT=${repository}" >> $GITHUB_ENV
+
       - name: Maven Build Package
         run: |
-          echo ${repository}
+          echo ${{env.FRUIT}}
         
