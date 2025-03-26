@@ -26,7 +26,7 @@ jobs:
 
           repository=$(echo ${FULL_REPOSITORY} | cut -d '/' -f 1)
           echo ${repository}
-          echo "PROJECT_NAME=$repository" >> $GITHUB_ENV
+          echo "PROJECT_NAME=${repository}" >> $GITHUB_ENV
           echo ${{PROJECT_NAME}}
 
       - name: Maven Build Package
