@@ -15,17 +15,11 @@ jobs:
     steps:
       - name: Setup 1
         run: |
-          echo 分支名称
-          echo ${{ github.ref_name }}
-          echo 仓库名称
-          echo ${{github.repository}}
-          echo 11111
           FULL_REPOSITORY=${{github.repository}}
-          echo ${FULL_REPOSITORY}
+          echo "仓库全称是${FULL_REPOSITORY}"
           
           repository=$(echo ${FULL_REPOSITORY} | cut -d '/' -f 1)
           echo 2222
           echo ${repository}
           echo 3333
-          echo "PROJECT_NAME=$repository" >> $GITHUB_ENV
-          echo ${{PROJECT_NAME}}
+        
