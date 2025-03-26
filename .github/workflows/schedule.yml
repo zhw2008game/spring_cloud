@@ -23,5 +23,5 @@ jobs:
 
       - name: Maven Build Package
         run: |
-          echo $repository
+          echo ${repository}
         
