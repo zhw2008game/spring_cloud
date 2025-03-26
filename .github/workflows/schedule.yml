@@ -16,4 +16,4 @@ jobs:
           echo ${{ github.ref_name }}
           echo ${{github.repository}}
           full_repository=${{github.repository}}
-          full_array=full_repository.split("/")
+          echo full_repository
