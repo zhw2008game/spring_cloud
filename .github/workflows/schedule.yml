@@ -21,6 +21,6 @@ jobs:
           FULL_REPOSITORY=${{github.repository}}
           echo ${FULL_REPOSITORY}
           
-          repository=echo ${FULL_REPOSITORY} | cut -d '/' -f 1
+          repository=${{echo ${FULL_REPOSITORY} | cut -d '/' -f 1}}
           echo 2222
           echo ${repository}
