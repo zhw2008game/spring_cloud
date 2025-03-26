@@ -15,7 +15,7 @@ jobs:
         run: |
           echo 分支名称
           echo ${{ github.ref_name }}
-          ehco 仓库名称
+          echo 仓库名称
           echo ${{github.repository}}
           echo 11111
           full_repository=${{github.repository}}
