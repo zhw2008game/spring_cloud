@@ -18,10 +18,16 @@ jobs:
           FULL_REPOSITORY=${{github.repository}}
           echo "仓库全称是${FULL_REPOSITORY}"
           
-          repository=$(echo ${FULL_REPOSITORY} | cut -d '/' -f 1)
-          echo "仓库简称是${repository}"
+          # repository=$(echo ${FULL_REPOSITORY} | cut -d '/' -f 1)
+          # echo "仓库简称是${repository}"
 
-          echo "PROJECT_NAME=${repository}" >> $GITHUB_ENV
+          # echo "PROJECT_NAME=${repository}" >> $GITHUB_ENV
+
+
+          repository=$(echo ${FULL_REPOSITORY} | cut -d '/' -f 1)
+          echo ${repository}
+          echo "PROJECT_NAME=$repository" >> $GITHUB_ENV
+          echo ${{PROJECT_NAME}}
 
       - name: Maven Build Package
         run: |
