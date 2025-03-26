@@ -13,13 +13,15 @@ jobs:
   task:
     runs-on: [ ubuntu-22.04 ]
     steps:
-      - name: Setup 1
+      - name: Get Repository Name
         run: |
           FULL_REPOSITORY=${{github.repository}}
           echo "仓库全称是${FULL_REPOSITORY}"
           
           repository=$(echo ${FULL_REPOSITORY} | cut -d '/' -f 1)
-          echo 2222
-          echo ${repository}
-          echo 3333
+          echo "仓库简称是${repository}"
+
+      - name: Maven Build Package
+        run: |
+          echo $repository
         
