@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Get Repository Name
         run: |
-          FULL_REPOSITORY=${{github.repository}}
+          FULL_REPOSITORY = ${{github.repository}}
           echo "仓库全称:${FULL_REPOSITORY}"
           
           repository=$(echo ${FULL_REPOSITORY} | cut -d '/' -f 1)
