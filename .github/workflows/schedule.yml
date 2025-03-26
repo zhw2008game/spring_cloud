@@ -19,6 +19,6 @@ jobs:
           echo ${{github.repository}}
           echo 11111
           FULL_REPOSITORY=${{github.repository}}
-          echo $(FULL_REPOSITORY)
+          echo ${FULL_REPOSITORY}
           
           echo $($(echo $(full_repository) | cut -d '/' -f 2))
