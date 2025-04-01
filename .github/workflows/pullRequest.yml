@@ -1,0 +1,19 @@
+name: Pull Request Flow
+on:
+  pull_request:
+    branches:
+      - "*"
+env:
+  PROJECT_NAME: 1
+jobs:
+  pullRequest:
+    runs-on: [ ubuntu-22.04 ]
+    steps:
+      - name: Show Branch Info
+        run: |
+          git branch -v
+
+      - name: Show Current Branch
+        run: |
+          echo ${{github.ref}}
+        
