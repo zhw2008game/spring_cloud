@@ -1,0 +1,29 @@
+name: schedule work flow
+on:
+  schedule:
+    - cron: '0/30 * * * *'
+  workflow_dispatch:
+  workflow_run: 
+    workflows: [feature-a-bdba]
+    types:
+      - completed
+env:
+  PROJECT_NAME: 1
+jobs:
+  task:
+    runs-on: [ ubuntu-22.04 ]
+    steps:
+      - name: Get Repository Name
+        run: |
+          FULL_REPOSITORY=${{github.repository}}
+          echo "仓库全称:${FULL_REPOSITORY}"
+          
+          repository=$(echo ${FULL_REPOSITORY} | cut -d '/' -f 1)
+          echo "仓库简称:${repository}"
+
+          echo "PROJECT_NAME=${repository}" >> $GITHUB_ENV
+
+      - name: Maven Build Package
+        run: |
+          echo ${{env.PROJECT_NAME}}
+        
