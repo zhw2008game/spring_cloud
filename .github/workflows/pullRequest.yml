@@ -2,7 +2,7 @@ name: Pull Request Flow
 on:
   pull_request:
     branches:
-      - 'feature**'
+      - 'feature_**'
 env:
   PROJECT_NAME: 1
 jobs:
